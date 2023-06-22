@@ -8,6 +8,17 @@
 </head>
 <body>
     <h1>画像アップロードフォーム</h1>
+    <h2>{{Auth::user()->name}}さんこんにちわ！</h2>
+    <form action="{{route('dashboard')}}" method="get">
+    <button type="submit">ダッシュボード</button>
+    @csrf
+    </form>
+    <form action="{{route('logout')}}" method="post">
+    <button type="submit">ログアウト</button>
+    @csrf
+    </form>
+
+
     <form action="" method="POST" enctype="multipart/form-data">
 
         <div>

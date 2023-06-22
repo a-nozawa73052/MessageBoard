@@ -1,4 +1,13 @@
 <h1>ポジション登録画面</h1>
+<h2>{{Auth::user()->name}}さんこんにちわ！</h2>
+<form action="{{route('dashboard')}}" method="get">
+<button type="submit">ダッシュボード</button>
+@csrf
+</form>
+<form action="{{route('logout')}}" method="post">
+<button type="submit">ログアウト</button>
+@csrf
+</form>
     <header>
     <a href="/coach/add"><button type="button">コーチ登録</button></a>
     <a href="/coach"><button type="button">コーチ一覧</button></a>
@@ -35,3 +44,4 @@
 </div>
 @csrf
 </form>
+

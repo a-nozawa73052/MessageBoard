@@ -11,11 +11,36 @@
                 </div>
 
                 <!-- Navigation Links -->
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+                </div> --}}
+{{-- ここをかきました --}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('coach')" :active="request()->routeIs('coach')">
+                        {{ __('監督') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('team')" :active="request()->routeIs('team')">
+                        {{ __('チーム') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('player')" :active="request()->routeIs('player')">
+                        {{ __('選手') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('position')" :active="request()->routeIs('position')">
+                        {{ __('ポジション') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('upload_form')" :active="request()->routeIs('upload_form')">
+                        {{ __('画像アップロードフォーム') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('upload_images')" :active="request()->routeIs('upload_images')">
+                        {{ __('画像アップロード一覧') }}
+                    </x-nav-link>
                 </div>
+{{-- ここをかきました --}}
             </div>
 
             <!-- Settings Dropdown -->

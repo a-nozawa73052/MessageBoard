@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Contracts\Auth\MustVerifyEmail; // ユーザー登録時の仮登録メールの機能
 
-class User extends Authenticatable
+
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
